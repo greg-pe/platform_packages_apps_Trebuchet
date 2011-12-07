@@ -242,6 +242,7 @@ public class Workspace extends SmoothPagedView
     // Preferences
     private boolean mShowSearchBar;
     private boolean mResizeAnyWidget;
+    private boolean mShowScrollingIndicator;
 
     /**
      * Used to inflate the Workspace from XML.
@@ -317,6 +318,7 @@ public class Workspace extends SmoothPagedView
         // Preferences
         mShowSearchBar = PreferencesProvider.Interface.Homescreen.getShowSearchBar(context);
         mResizeAnyWidget = PreferencesProvider.Interface.Homescreen.getResizeAnyWidget(context);
+        mShowScrollingIndicator = PreferencesProvider.Interface.Homescreen.getShowScrollingIndicator(context);
 
         mLauncher = (Launcher) context;
         initWorkspace();
@@ -411,6 +413,10 @@ public class Workspace extends SmoothPagedView
                 paddingTop = (int)res.getDimension(R.dimen.qsb_bar_hidden_inset);
             }
             setPadding(0, paddingTop, getPaddingRight(), getPaddingBottom());
+        }
+
+        if (!mShowScrollingIndicator) {
+            disableScrollingIndicator();
         }
 
         mChangeStateAnimationListener = new AnimatorListenerAdapter() {
