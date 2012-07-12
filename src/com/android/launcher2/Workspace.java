@@ -84,7 +84,7 @@ public class Workspace extends SmoothPagedView
 
     private static final int BACKGROUND_FADE_OUT_DURATION = 350;
     private static final int ADJACENT_SCREEN_DROP_DURATION = 300;
-    private static final int FLING_THRESHOLD_VELOCITY = 500;
+    private static final int FLING_THRESHOLD_VELOCITY = 300;
 
     // These animators are used to fade the children's outlines
     private ObjectAnimator mChildrenOutlineFadeInAnimation;
