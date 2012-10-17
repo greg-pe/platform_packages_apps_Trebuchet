@@ -29,9 +29,9 @@
                     launcher:pickerTitle2="@string/preferences_interface_homescreen_general_grid_columns_title"
                     launcher:defaultValue1="@integer/cell_count_y"
                     launcher:defaultValue2="@integer/cell_count_x"
-                    launcher:max1="7"
+                    launcher:max1="@integer/config_maxWorkspaceRows"
                     launcher:min1="3"
-                    launcher:max2="7"
+                    launcher:max2="@integer/config_maxWorkspaceColumns"
                     launcher:min2="3" />
                 <com.cyanogenmod.trebuchet.preference.NumberPickerPreference android:key="ui_homescreen_screens"
                     android:title="@string/preferences_interface_homescreen_general_screens_title"
@@ -65,6 +65,9 @@
                 <CheckBoxPreference android:key="ui_homescreen_general_resize_any_widget"
                     android:title="@string/preferences_interface_homescreen_general_resize_any_widget_title"
                     android:summary="@string/preferences_interface_homescreen_general_resize_any_widget_summary" />
+                <CheckBoxPreference android:key="ui_homescreen_general_hide_icon_labels"
+                    android:title="@string/preferences_interface_homescreen_general_hide_icon_labels_title"
+                    android:summary="@string/preferences_interface_homescreen_general_hide_icon_labels_summary" />
             </PreferenceCategory>
             <PreferenceCategory android:title="@string/preferences_interface_homescreen_scrolling_category">
                 <CheckBoxPreference android:key="ui_homescreen_scrolling_scroll_wallpaper"
@@ -112,15 +115,10 @@
         </PreferenceScreen>
 
         <!-- Dock -->
-        <PreferenceScreen android:key="ui_dock"
+        <!-- <PreferenceScreen android:key="ui_dock"
             android:title="@string/preferences_interface_dock_title">
-            <com.cmoatoto.trebuchet.preference.NumberPickerPreference android:key="ui_homescreen_general_hotseat_size"
-                android:title="@string/preferences_interface_dock_size_title"
-                android:summary="@string/preferences_interface_dock_size_summary"
-                android:defaultValue="@integer/hotseat_cell_count"
-                launcher:max="9"
-                launcher:min="1" />
-        </PreferenceScreen>
+
+        </PreferenceScreen> -->
 
         <!-- Icons -->
         <!-- <PreferenceScreen android:key="ui_icons"
